@@ -3,5 +3,7 @@ joblib
 pandas
 scikit-learn
 numpy
+streamlit-lottie
+
 
 # RUN : streamlit run app.py
