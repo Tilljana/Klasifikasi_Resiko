@@ -1,0 +1,7 @@
+streamlit
+joblib
+pandas
+scikit-learn
+numpy
+
+# RUN : streamlit run app.py
