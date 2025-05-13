@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie
 import json
 
 # Memuat model dan scaler
-model = joblib.load('best_svc_model.pkl')
+model = joblib.load('model.pkl')
 scaler = joblib.load('scaler.pkl')
 
 # Memuat animasi Lottie
