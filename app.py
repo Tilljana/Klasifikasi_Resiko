@@ -80,8 +80,8 @@ elif page == "about":
 
     with col1:
         st.markdown("""
-        🧾 **NCPR (National Cost Poverty Rate)**  
-        Persentase penduduk yang hidup di bawah garis kemiskinan.
+        🧾 **NCPR (Normative Consumption to Net Production Ratio)**  
+        adalah perbandingan antara konsumsi pangan yang dibutuhkan atau dianggap normal dengan produksi pangan bersih suatu wilayah..
 
         🍚 **Pengeluaran Pangan (%)**  
         Persentase pengeluaran rumah tangga untuk konsumsi pangan.
