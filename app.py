@@ -50,8 +50,8 @@ if page == "home":
     st.markdown(
         """
         <div style="text-align:center">
-            <h1 style="font-size: 60px;">🚧 SIDARA</h1>
-            <h3>Sistem Deteksi Risiko Urbanisasi Daerah</h3>
+            <h1 style="font-size: 60px;">🚧 SIDAKIN </h1>
+            <h3>Sistem Deteksi Kemiskinan Daerah</h3>
         </div>
         """,
         unsafe_allow_html=True
@@ -62,10 +62,7 @@ if page == "home":
     st.markdown("""
     <div style='text-align: justify; font-size: 18px;'>
         <p>
-            <strong>SIDARA</strong> adalah sistem deteksi risiko urbanisasi daerah berbasis <em>data mining</em> 
-            yang dirancang untuk mengidentifikasi tingkat risiko urbanisasi pada kabupaten/kota di Indonesia. 
-            Sistem ini mempertimbangkan berbagai indikator sosial ekonomi untuk mendukung 
-            <strong>perencanaan pembangunan yang berkelanjutan</strong>.
+            <strong>SIDARA</strong> SiDakin atau Sistem Deteksi Daerah Kemiskinan hadir sebagai solusi cerdas untuk memetakan tingkat kemiskinan di berbagai wilayah Indonesia. Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis, mengklasifikasikan, dan memvisualisasikan daerah berdasarkan tingkat kesejahteraannya.</strong>.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -115,14 +112,14 @@ elif page == "about":
         """)
 
     st.markdown("---")
-    st.success("Fitur-fitur di atas digunakan sebagai indikator dalam sistem klasifikasi untuk menilai potensi risiko urbanisasi suatu wilayah.")
+    st.success("Fitur-fitur di atas digunakan sebagai indikator dalam sistem klasifikasi untuk menilai Tingkat Kemiskinan suatu wilayah.")
 
 
 
 
 elif page == "content":
-    st.title("🧮 Prediksi Risiko Urbanisasi")
-    st.markdown("Masukkan data pada form di bawah ini untuk mengetahui klasifikasi risiko.")
+    st.title("🧮 Prediksi Tingkat kemiskinan")
+    st.markdown("Masukkan data pada form di bawah ini untuk mengetahui Tingkat Kemiskinan.")
 
     with st.form("input_form", clear_on_submit=True):
         col1, col2 = st.columns(2)
@@ -156,8 +153,8 @@ elif page == "content":
 
         st.markdown("### 💡 Hasil Prediksi:")
         if prediction[0] == 1:
-            st.error('⚠️ Risiko Urbanisasi: **Tinggi**')
+            st.error('⚠️ Kemiskinan: **Tinggi**')
         else:
-            st.success('✅ Risiko Urbanisasi: **Rendah**')
+            st.success('✅ Kemiskinan: **Rendah**')
 
 
