@@ -57,17 +57,17 @@ if page == "home":
         unsafe_allow_html=True
     )
 
-        # Embed iframe for the data visualization
-    st.markdown("""
-    <iframe src="https://data.goodstats.id/statistic/embed/provinsi-dengan-jumlah-penduduk-miskin-terbanyak-di-indonesia-maret-2023-qhMgC" frameborder="0" style="height: 380px; width: 100%"></iframe>
-    """, unsafe_allow_html=True)
-
     st.markdown("""
     <div style='text-align: justify; font-size: 18px;'>
         <p>
             <strong>SIDARA</strong> SiDakin atau Sistem Deteksi Daerah Kemiskinan hadir sebagai solusi cerdas untuk memetakan tingkat kemiskinan di berbagai wilayah Indonesia. Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis, mengklasifikasikan, dan memvisualisasikan daerah berdasarkan tingkat kesejahteraannya.</strong>.
         </p>
     </div>
+    """, unsafe_allow_html=True)
+
+        # Embed iframe for the data visualization
+    st.markdown("""
+    <iframe src="https://data.goodstats.id/statistic/embed/provinsi-dengan-jumlah-penduduk-miskin-terbanyak-di-indonesia-maret-2023-qhMgC" frameborder="0" style="height: 380px; width: 100%"></iframe>
     """, unsafe_allow_html=True)
 
 
