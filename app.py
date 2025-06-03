@@ -60,7 +60,7 @@ if page == "home":
     st.markdown("""
     <div style='text-align: justify; font-size: 18px;'>
         <p>
-            <strong>SIDARA</strong>Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis, mengklasifikasikan, dan memvisualisasikan daerah berdasarkan tingkat kesejahteraannya.</strong>
+            Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis, mengklasifikasikan, dan memvisualisasikan daerah berdasarkan tingkat kesejahteraannya.
         </p>
     </div>
     """, unsafe_allow_html=True)
