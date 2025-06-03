@@ -50,14 +50,12 @@ if page == "home":
     st.markdown(
         """
         <div style="text-align:center">
-            <h1 style="font-size: 60px;">🚧 SIDAKIN </h1>
+            <h1 style="font-size: 60px;">SIDAKIN </h1>
             <h3>Sistem Deteksi Kemiskinan Daerah</h3>
         </div>
         """,
         unsafe_allow_html=True
     )
-
-    st.image("urbanisasi.png", use_container_width=True)
 
     st.markdown("""
     <div style='text-align: justify; font-size: 18px;'>
@@ -66,6 +64,12 @@ if page == "home":
         </p>
     </div>
     """, unsafe_allow_html=True)
+
+    # Embed iframe for the data visualization
+    st.markdown("""
+    <iframe src="https://data.goodstats.id/statistic/embed/provinsi-dengan-jumlah-penduduk-miskin-terbanyak-di-indonesia-maret-2023-qhMgC" frameborder="0" style="height: 380px; width: 100%"></iframe>
+    """, unsafe_allow_html=True)
+
 
 # about
 elif page == "about":
