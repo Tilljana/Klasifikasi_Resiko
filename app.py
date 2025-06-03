@@ -60,8 +60,7 @@ if page == "home":
     st.markdown("""
     <div style='text-align: justify; font-size: 18px;'>
         <p>
-            Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis, mengklasifikasikan, dan memvisualisasikan daerah berdasarkan tingkat kesejahteraannya.
-        </p>
+           <strong>SiDakin</strong> (Sistem Deteksi Kemiskinan Daerah) adalah solusi cerdas untuk memetakan tingkat kemiskinan di berbagai wilayah Indonesia. Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis, mengklasifikasikan, serta memvisualisasikan wilayah-wilayah berdasarkan tingkat kesejahteraannya.
     </div>
     """, unsafe_allow_html=True)
 
