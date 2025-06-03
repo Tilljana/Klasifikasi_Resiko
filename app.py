@@ -70,7 +70,7 @@ if page == "home":
 # about
 elif page == "about":
     st.title("📊 Tentang Fitur-Fitur yang Digunakan")
-    st.markdown("Berikut adalah fitur-fitur yang digunakan dalam sistem **klasifikasi risiko urbanisasi**:")
+    st.markdown("Berikut adalah fitur-fitur yang digunakan dalam sistem **klasifikasi tingkat kemiskinan**:")
 
     # Dua kolom untuk membagi fitur
     col1, col2 = st.columns(2)
