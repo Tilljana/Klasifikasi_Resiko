@@ -51,7 +51,7 @@ if page == "home":
         """
         <div style="text-align:center">
             <h1 style="font-size: 60px;">SENTRA</h1>
-            <h3>Sistem Deteksi Kemiskinan Daerah</h3>
+            <h3>Sistem Evaluasi Tingkat Risiko Kemiskinan Daerah</h3>
         </div>
         """,
         unsafe_allow_html=True
