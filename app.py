@@ -24,19 +24,19 @@ st.sidebar.markdown("<h2 class='sidebar-header'>Navigasi</h2>", unsafe_allow_htm
 
 # Menentukan halaman
 pages = {
-    "🏠 Dashboard": "home",
-    "ℹ️ Indikator": "about",
-    "📊 Poverty Scan": "content"
+    "🏠 Dashboard": "Dashboard",
+    "ℹ️ Indikator": "Indikator",
+    "📊 Poverty Scan": "Poverty Scan"
 }
 
 # Mengingat halaman yang dipilih menggunakan session state
 if 'selected_page' not in st.session_state:
-    st.session_state.selected_page = "home"
+    st.session_state.selected_page = "Dashboard"
 
 # Tombol untuk memilih halaman tanpa menggunakan perulangan
-home_button = st.sidebar.button("🏠 Dashboard", key="home")
-about_button = st.sidebar.button("ℹ️ Indikator", key="about")
-content_button = st.sidebar.button("📊 Poverty Scan", key="content")
+home_button = st.sidebar.button("🏠 Dashboard", key="Dashboard")
+about_button = st.sidebar.button("ℹ️ Indikator", key="Indikator")
+content_button = st.sidebar.button("📊 Poverty Scan", key="Poverty Scan")
 
 # Menangani navigasi tanpa perulangan
 if home_button:
@@ -49,8 +49,8 @@ elif content_button:
 # Menampilkan halaman berdasarkan pemilihan
 page = st.session_state.selected_page
 
-# ---------------------- HOME ----------------------
-if page == "home":
+# ---------------------- Dashboard ----------------------
+if page == "Dashboard":
     st.markdown(
         """
         <div style="text-align:center">
