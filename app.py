@@ -15,14 +15,18 @@ def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
 
+# Menambahkan gambar di bagian atas sidebar
+st.sidebar.image("logo-transparent.png", use_container_width=True)# Ganti dengan path gambar Anda
+
+
 # Sidebar Navigasi Manual
 st.sidebar.markdown("<h2 class='sidebar-header'>Navigasi</h2>", unsafe_allow_html=True)
 
 # Menentukan halaman
 pages = {
-    "🏠 Beranda": "home",
-    "ℹ️ Tentang": "about",
-    "📊 Konten": "content"
+    "🏠 Dashboard": "home",
+    "ℹ️ Indikator": "about",
+    "📊 Poverty Scan": "content"
 }
 
 # Mengingat halaman yang dipilih menggunakan session state
@@ -30,17 +34,17 @@ if 'selected_page' not in st.session_state:
     st.session_state.selected_page = "home"
 
 # Tombol untuk memilih halaman tanpa menggunakan perulangan
-home_button = st.sidebar.button("🏠 Beranda", key="home")
-about_button = st.sidebar.button("ℹ️ Tentang", key="about")
-content_button = st.sidebar.button("📊 Konten", key="content")
+home_button = st.sidebar.button("🏠 Dashboard", key="home")
+about_button = st.sidebar.button("ℹ️ Indikator", key="about")
+content_button = st.sidebar.button("📊 Poverty Scan", key="content")
 
 # Menangani navigasi tanpa perulangan
 if home_button:
-    st.session_state.selected_page = "home"
+    st.session_state.selected_page = "Dashboard"
 elif about_button:
-    st.session_state.selected_page = "about"
+    st.session_state.selected_page = "Indikator"
 elif content_button:
-    st.session_state.selected_page = "content"
+    st.session_state.selected_page = "Poverty Scan"
 
 # Menampilkan halaman berdasarkan pemilihan
 page = st.session_state.selected_page
@@ -57,23 +61,20 @@ if page == "home":
         unsafe_allow_html=True
     )
 
-    st.markdown("""
+    st.markdown(""" 
     <div style='text-align: justify; font-size: 18px;'>
         <p>
-           <strong>SENTRA</strong> (Sistem Evaluasi Tingkat Risiko Kemiskinan Daerah) adalah solusi cerdas untuk identifikasi tingkat kemiskinan di suatu wilayah. Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis dan mengklasifikasikan wilayah berdasarkan data sosial ekonomi.
+           <strong>SENTRA</strong> (Sistem Evaluasi Tingkat Risiko Kemiskinan Daerah) adalah solusi cerdas untuk identifikasi tingkat kemiskinan di suatu wilayah. Aplikasi ini memanfaatkan teknologi data dan kecerdasan buatan untuk menganalisis dan mengklasifikasikan wilayah berdasarkan data sosial ekonomi.
     </div>
     """, unsafe_allow_html=True)
 
         # Embed iframe for the data visualization
-    st.markdown("""
+    st.markdown(""" 
     <iframe src="https://data.goodstats.id/statistic/embed/provinsi-dengan-jumlah-penduduk-miskin-terbanyak-di-indonesia-maret-2023-qhMgC" frameborder="0" style="height: 380px; width: 100%"></iframe>
     """, unsafe_allow_html=True)
 
-
-
-
-# about
-elif page == "about":
+# indikator
+elif page == "Indikator":
     st.title("📊 Tentang Fitur-Fitur yang Digunakan")
     st.markdown("Berikut adalah fitur-fitur yang digunakan dalam sistem **klasifikasi tingkat kemiskinan**:")
 
@@ -81,7 +82,7 @@ elif page == "about":
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("""
+        st.markdown(""" 
         🧾 **NCPR (Normative Consumption to Net Production Ratio)**  
         adalah perbandingan antara konsumsi pangan yang dibutuhkan atau dianggap normal dengan produksi pangan bersih suatu wilayah.
 
@@ -99,7 +100,7 @@ elif page == "about":
         """)
 
     with col2:
-        st.markdown("""
+        st.markdown(""" 
         🏥 **Rasio Tenaga Kesehatan**  
         Perbandingan jumlah tenaga kesehatan terhadap jumlah penduduk.
 
@@ -119,10 +120,7 @@ elif page == "about":
     st.markdown("---")
     st.success("Fitur-fitur di atas digunakan sebagai indikator dalam sistem klasifikasi untuk menilai Tingkat Kemiskinan suatu wilayah.")
 
-
-
-
-elif page == "content":
+elif page == "Poverty Scan":
     st.title("🧮 Prediksi Tingkat kemiskinan")
     st.markdown("Masukkan data pada form di bawah ini untuk mengetahui Tingkat Kemiskinan.")
 
@@ -146,7 +144,7 @@ elif page == "content":
 
     if submit_button:
         # Konversi input menjadi float untuk fitur 1-9 dan int untuk fitur ke-10
-        input_data = pd.DataFrame([[
+        input_data = pd.DataFrame([[ 
             float(feature1), float(feature2), float(feature3),
             float(feature4), float(feature5), float(feature6),
             float(feature7), float(feature8), float(feature9),
@@ -161,5 +159,3 @@ elif page == "content":
             st.error('⚠️ Kemiskinan: **Tinggi**')
         else:
             st.success('✅ Kemiskinan: **Rendah**')
-
-
